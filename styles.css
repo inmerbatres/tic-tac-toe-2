@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FCE8E6; /* Fondo con un tono cálido y atractivo */
+}
+
+h1 {
+    font-size: 3rem;
+    color: #E63946; /* Título en un rojo vibrante */
+    margin-top: 20px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+.cell {
+    background-color: #F1FAEE; /* Fondo de celdas en un tono claro y suave */
+    color: #F77F00; /* Texto en un naranja brillante */
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #F77F00; /* Borde en naranja brillante */
+    border-radius: 10px; /* Esquinas redondeadas */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    position: relative;
+}
+
+.cell:hover {
+    background-color: #F77F00; /* Fondo de celdas en naranja brillante al pasar el ratón */
+    color: #FFFFFF; /* Texto en blanco al pasar el ratón */
+}
+
+.cell:active {
+    transform: scale(0.95); /* Efecto de pulso al hacer clic */
+    transform-origin: center;
+}
+
+#status {
+    font-size: 2rem;
+    color: #E63946; /* Color de texto en rojo vibrante */
+    margin-top: 20px;
+}
+
+#reset {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: #FFFFFF; /* Texto en blanco en el botón */
+    background-color: #F77F00; /* Fondo del botón en naranja brillante */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#reset:hover {
+    background-color: #E63946; /* Fondo del botón en rojo vibrante al pasar el ratón */
+}
